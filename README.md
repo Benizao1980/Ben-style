@@ -1,5 +1,3 @@
-# Pascoe Plot Style
-
 A publication-focused styling toolkit for scientific figures, with a broad master colour library, reusable categorical and continuous palettes, semantic project presets, and consistent vector-first export.
 
 The repository separates three things that are often mixed together:
