@@ -1,3 +1,5 @@
+# Pascoe Plot Style
+
 A publication-focused styling toolkit for scientific figures, with a broad master colour library, reusable categorical and continuous palettes, semantic project presets, and consistent vector-first export.
 
 The repository separates three things that are often mixed together:
@@ -107,6 +109,9 @@ Included worked presets:
 - `campylobacter_coli.lineage`
 - `campylobacter_coli.clinical_status`
 - `campylobacter_coli.host`
+- `phylodynamics.dated_tree`
+- `phylodynamics.skygrowth`
+- `phylodynamics.cavedive`
 
 Project presets reference names from `master.json`; they do not maintain a second set of unrelated hex codes.
 
@@ -135,6 +140,56 @@ p <- ggplot(df, aes(lineage, percent, fill=lineage)) +
 save_pascoe_plot(p, "outputs/lineages")
 ```
 
+
+## Worked example: BactDating, skygrowth and CaveDive
+
+The repository includes an R adapter layer for a coordinated three-panel phylodynamics figure:
+
+- a calendar-scaled BactDating tree, with optional 95% node-date intervals;
+- a skygrowth effective-population-size trajectory and sampling-date rug;
+- CaveDive posterior expansion support mapped continuously onto branches.
+
+![Phylodynamics worked example](docs/phylodynamics_worked_example.png)
+
+```r
+source("R/pascoe_theme.R")
+source("R/pascoe_phylodynamics.R")
+
+bd <- readRDS("results/bactdating_fit.rds")
+sg <- readRDS("results/skygrowth_fit.rds")
+cd <- readRDS("results/cavedive_fit.rds")
+meta <- read.csv("results/tip_metadata.csv")
+
+max_year <- max(meta$year, na.rm=TRUE)
+root_year <- bd$tree$root.time
+year_limits <- c(floor(root_year), ceiling(max_year))
+focus <- c(1980, 2000)  # Replace with a justified interval, or set NULL
+
+pA <- plot_bactdating_pascoe(
+  bd, tip_data=meta, tip_colour="host",
+  tip_preset="campylobacter_coli_host",
+  highlight_period=focus, year_limits=year_limits
+)
+pB <- plot_skygrowth_pascoe(
+  sg, max_sample_year=max_year,
+  sampling_years=meta$year,
+  highlight_period=focus, year_limits=year_limits
+)
+pC <- plot_cavedive_pascoe(
+  cd, max_sample_year=max_year, calendar_root_year=root_year,
+  tip_data=meta, tip_fill="host",
+  tip_preset="campylobacter_coli_host",
+  highlight_period=focus, year_limits=year_limits
+)
+
+figure <- assemble_phylodynamics_pascoe(pA, pB, pC)
+save_pascoe_plot(figure, "outputs/phylodynamics", width=7.2, height=10.2)
+```
+
+The runnable script at [`examples/phylodynamics_worked_example.R`](examples/phylodynamics_worked_example.R) uses synthetic native-like objects by default and shows exactly where to substitute saved analysis objects. See [`examples/phylodynamics/README.md`](examples/phylodynamics/README.md) for object requirements and design decisions.
+
+R dependencies for this example are `ape`, `ggplot2`, `ggtree`, and `patchwork`; `BactDating`, `treeio`, and `tibble` are additionally required when `show_hpd=TRUE`.
+
 ## Contexts
 
 ```python
@@ -150,6 +205,8 @@ python examples/python_general.py
 python examples/acinetobacter_example.py
 python examples/campylobacter_coli_example.py
 python scripts/make_palette_reference.py
+python scripts/make_phylodynamics_preview.py
+# R: source("examples/phylodynamics_worked_example.R")
 ```
 
 ## Editing palette data

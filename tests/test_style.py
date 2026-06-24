@@ -44,6 +44,9 @@ def test_semantic_presets():
     assert source["poultry"] == MASTER["sunflower"]
     assert preset_colour("ST-1150 complex", "campylobacter_coli.lineage") == MASTER["teal"]
     assert preset_colour("IC2", "acinetobacter.lineage") == MASTER["navy"]
+    dated = get_preset("phylodynamics.dated_tree")
+    assert dated["branch"] == MASTER["ink"]
+    assert get_palette("expansion_support")[0] == MASTER["light_grey"]
 
 
 def test_style_and_colormap():
@@ -74,3 +77,27 @@ def test_canonical_and_packaged_json_are_synced():
         canonical = json.loads((root / "data" / name).read_text())
         packaged = json.loads((root / "src" / "pascoe_plot_style" / "data" / name).read_text())
         assert canonical == packaged
+
+
+def test_phylodynamics_r_adapter_is_present():
+    root = Path(__file__).resolve().parents[1]
+    adapter = (root / "R" / "pascoe_phylodynamics.R").read_text()
+    example = (root / "examples" / "phylodynamics_worked_example.R").read_text()
+    adapter_functions = (
+        "plot_bactdating_pascoe",
+        "plot_skygrowth_pascoe",
+        "tidy_cavedive_branches",
+        "plot_cavedive_pascoe",
+        "assemble_phylodynamics_pascoe",
+    )
+    for function_name in adapter_functions:
+        assert f"{function_name} <- function" in adapter
+    for function_name in (
+        "plot_bactdating_pascoe",
+        "plot_skygrowth_pascoe",
+        "plot_cavedive_pascoe",
+        "assemble_phylodynamics_pascoe",
+    ):
+        assert function_name in example
+    assert (root / "docs" / "phylodynamics_worked_example.svg").exists()
+    assert (root / "docs" / "phylodynamics_worked_example.png").exists()

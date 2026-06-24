@@ -1,4 +1,4 @@
-.PHONY: install sync references demo test clean
+.PHONY: install sync references demo phylodynamics-preview test clean
 
 install:
 	python -m pip install -e ".[dev]"
@@ -13,6 +13,9 @@ demo:
 	python examples/python_general.py
 	python examples/acinetobacter_example.py
 	python examples/campylobacter_coli_example.py
+
+phylodynamics-preview:
+	python scripts/make_phylodynamics_preview.py
 
 test:
 	python -m pytest

@@ -210,6 +210,13 @@ pascoe_palettes <- list(
     "warm_grey",
     "ink"
 ),
+  "expansion_support"=c(
+    "light_grey",
+    "sand",
+    "terracotta",
+    "brick",
+    "burgundy"
+),
   "cool_warm"=c(
     "navy",
     "slate_blue",
@@ -295,6 +302,25 @@ pascoe_presets <- list(
     "cattle"="sage",
     "goat"="olive",
     "other"="stone"
+),
+  "phylodynamics_dated_tree"=c(
+    "branch"="ink",
+    "tip"="teal",
+    "hpd"="powder_blue",
+    "highlight"="sand",
+    "background"="light_grey"
+),
+  "phylodynamics_skygrowth"=c(
+    "estimate"="teal",
+    "interval"="seafoam",
+    "sampling"="warm_grey",
+    "highlight"="sand"
+),
+  "phylodynamics_cavedive"=c(
+    "background"="light_grey",
+    "low_support"="sand",
+    "high_support"="burgundy",
+    "highlight"="sand"
 )
 )
 

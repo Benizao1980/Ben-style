@@ -61,5 +61,26 @@
       "goat": "olive",
       "other": "stone"
     }
+  },
+  "phylodynamics": {
+    "dated_tree": {
+      "branch": "ink",
+      "tip": "teal",
+      "hpd": "powder_blue",
+      "highlight": "sand",
+      "background": "light_grey"
+    },
+    "skygrowth": {
+      "estimate": "teal",
+      "interval": "seafoam",
+      "sampling": "warm_grey",
+      "highlight": "sand"
+    },
+    "cavedive": {
+      "background": "light_grey",
+      "low_support": "sand",
+      "high_support": "burgundy",
+      "highlight": "sand"
+    }
   }
 }

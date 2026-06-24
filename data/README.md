@@ -13,3 +13,7 @@ python scripts/sync_palette_data.py
 ```
 
 This copies the JSON files into the installable Python package and regenerates `R/pascoe_data.R`. Do not edit the generated R data file directly.
+
+## Phylodynamics additions
+
+`expansion_support` is a continuous neutral-to-burgundy scale for branch-level posterior support. The `phylodynamics` preset groups the default colours used by the BactDating, skygrowth and CaveDive adapters.

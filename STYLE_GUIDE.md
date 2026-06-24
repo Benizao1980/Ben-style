@@ -92,7 +92,23 @@ Project presets should be treated as editable examples. A new project can add it
 - Use neutral greys for background metadata unless colour carries biological meaning.
 - Let the tree occupy most of the available plotting area.
 
-## 9. Composition
+
+## 9. Phylodynamic composites
+
+When combining dated trees, demographic reconstructions and branch-level expansion inference:
+
+- convert every time axis to calendar years where the input objects permit it;
+- keep one shared host or lineage mapping across tree panels;
+- use uncertainty ribbons for demographic trajectories rather than boundary lines alone;
+- add sampling dates as a small rug so apparent population changes can be assessed against sampling intensity;
+- encode CaveDive branch support continuously from neutral grey through warm tones to burgundy;
+- use a highlighted date interval only when it has a stated biological or analytical meaning;
+- avoid displaying node-date intervals on every node of a dense main-text tree; use selective annotation or a supplementary panel;
+- align panel widths, year limits and panel tags before export.
+
+The supplied R adapters are in `R/pascoe_phylodynamics.R`, with a runnable example in `examples/phylodynamics_worked_example.R`.
+
+## 10. Composition
 
 - Maintain consistent outer margins and inter-panel spacing.
 - Let the primary data object dominate each panel.
@@ -100,7 +116,7 @@ Project presets should be treated as editable examples. A new project can add it
 - Use portrait layouts only when the scientific structure benefits from them.
 - Do not stretch figures merely to fill a page.
 
-## 10. Export
+## 11. Export
 
 For manuscript figures, produce:
 

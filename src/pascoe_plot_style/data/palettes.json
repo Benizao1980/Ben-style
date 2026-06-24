@@ -177,6 +177,13 @@
       "stone",
       "warm_grey",
       "ink"
+    ],
+    "expansion_support": [
+      "light_grey",
+      "sand",
+      "terracotta",
+      "brick",
+      "burgundy"
     ]
   },
   "diverging": {
