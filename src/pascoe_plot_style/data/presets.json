@@ -1,0 +1,65 @@
+{
+  "source_attribution": {
+    "poultry": "sunflower",
+    "chicken": "sunflower",
+    "ruminant": "sage",
+    "cattle": "sage",
+    "pig": "dusty_pink",
+    "swine": "dusty_pink",
+    "wild_bird": "mauve",
+    "environment": "powder_blue",
+    "other_animal": "warm_grey",
+    "other": "stone",
+    "human": "ink"
+  },
+  "amr_phenotype": {
+    "resistant": "brick",
+    "intermediate": "mustard",
+    "susceptible": "slate_blue",
+    "unknown": "stone"
+  },
+  "acinetobacter": {
+    "lineage": {
+      "IC1": "mustard",
+      "IC2": "navy",
+      "IC7": "coral",
+      "unassigned": "warm_grey",
+      "other": "stone"
+    },
+    "carbapenem": {
+      "imipenem": "burgundy",
+      "meropenem": "coral",
+      "acceptable_error": "dusty_pink",
+      "breakpoint": "navy",
+      "neutral": "warm_grey"
+    },
+    "architecture": {
+      "OXA-23": "burgundy",
+      "OXA-72/OXA-24/40": "saffron",
+      "MBL": "slate_blue",
+      "mixed": "mauve",
+      "unknown": "stone"
+    }
+  },
+  "campylobacter_coli": {
+    "lineage": {
+      "ST-828 complex": "mustard",
+      "ST-1150 complex": "teal",
+      "other": "stone",
+      "unassigned": "warm_grey"
+    },
+    "clinical_status": {
+      "diarrhoeal": "brick",
+      "asymptomatic": "powder_blue",
+      "unknown": "stone"
+    },
+    "host": {
+      "human": "ink",
+      "poultry": "sunflower",
+      "pig": "dusty_pink",
+      "cattle": "sage",
+      "goat": "olive",
+      "other": "stone"
+    }
+  }
+}

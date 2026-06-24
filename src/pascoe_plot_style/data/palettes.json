@@ -1,0 +1,216 @@
+{
+  "film": {
+    "grand_budapest": [
+      "burgundy",
+      "dusty_pink",
+      "rose",
+      "mauve",
+      "plum",
+      "lavender",
+      "mustard",
+      "cream"
+    ],
+    "moonrise": [
+      "mustard",
+      "sand",
+      "khaki",
+      "sage",
+      "seafoam",
+      "powder_blue",
+      "slate_blue",
+      "chocolate"
+    ],
+    "asteroid_city": [
+      "powder_blue",
+      "sky",
+      "apricot",
+      "coral",
+      "mustard",
+      "sage",
+      "dusty_pink",
+      "cream"
+    ],
+    "darjeeling": [
+      "saffron",
+      "terracotta",
+      "teal",
+      "navy",
+      "rose",
+      "olive",
+      "sand",
+      "burgundy"
+    ],
+    "royal_tenenbaums": [
+      "brick",
+      "mustard",
+      "navy",
+      "dusty_pink",
+      "chocolate",
+      "sage",
+      "cream",
+      "plum"
+    ],
+    "fantastic_mr_fox": [
+      "apricot",
+      "terracotta",
+      "brick",
+      "mustard",
+      "olive",
+      "moss",
+      "chocolate",
+      "sand"
+    ],
+    "life_aquatic": [
+      "navy",
+      "slate_blue",
+      "sky",
+      "powder_blue",
+      "teal",
+      "seafoam",
+      "coral",
+      "sunflower"
+    ],
+    "french_dispatch": [
+      "burgundy",
+      "saffron",
+      "navy",
+      "powder_blue",
+      "dusty_pink",
+      "olive",
+      "cream",
+      "ink"
+    ]
+  },
+  "qualitative": {
+    "balanced_4": [
+      "burgundy",
+      "mustard",
+      "teal",
+      "powder_blue"
+    ],
+    "balanced_6": [
+      "burgundy",
+      "mustard",
+      "teal",
+      "coral",
+      "slate_blue",
+      "mauve"
+    ],
+    "balanced_8": [
+      "burgundy",
+      "mustard",
+      "teal",
+      "coral",
+      "slate_blue",
+      "mauve",
+      "olive",
+      "dusty_pink"
+    ],
+    "balanced_12": [
+      "burgundy",
+      "mustard",
+      "teal",
+      "coral",
+      "slate_blue",
+      "mauve",
+      "olive",
+      "dusty_pink",
+      "saffron",
+      "powder_blue",
+      "moss",
+      "terracotta"
+    ],
+    "muted_8": [
+      "brick",
+      "khaki",
+      "sage",
+      "powder_blue",
+      "slate_blue",
+      "mauve",
+      "warm_grey",
+      "sand"
+    ],
+    "accessible_8": [
+      "ink",
+      "saffron",
+      "sky",
+      "teal",
+      "sunflower",
+      "slate_blue",
+      "terracotta",
+      "rose"
+    ]
+  },
+  "sequential": {
+    "warm": [
+      "cream",
+      "sand",
+      "apricot",
+      "terracotta",
+      "brick",
+      "burgundy",
+      "plum"
+    ],
+    "cool": [
+      "cream",
+      "powder_blue",
+      "sky",
+      "teal",
+      "navy"
+    ],
+    "green": [
+      "cream",
+      "seafoam",
+      "sage",
+      "olive",
+      "moss"
+    ],
+    "purple": [
+      "cream",
+      "lavender",
+      "mauve",
+      "plum"
+    ],
+    "neutral": [
+      "white",
+      "light_grey",
+      "stone",
+      "warm_grey",
+      "ink"
+    ]
+  },
+  "diverging": {
+    "cool_warm": [
+      "navy",
+      "slate_blue",
+      "powder_blue",
+      "cream",
+      "apricot",
+      "terracotta",
+      "burgundy"
+    ],
+    "teal_coral": [
+      "teal",
+      "seafoam",
+      "cream",
+      "dusty_pink",
+      "coral",
+      "brick"
+    ],
+    "purple_green": [
+      "plum",
+      "mauve",
+      "cream",
+      "seafoam",
+      "moss"
+    ]
+  },
+  "ui": {
+    "background": "white",
+    "text": "ink",
+    "axis": "ink",
+    "grid": "light_grey",
+    "light_border": "stone",
+    "muted_text": "warm_grey"
+  }
+}

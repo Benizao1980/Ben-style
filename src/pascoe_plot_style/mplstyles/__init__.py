@@ -1,0 +1,1 @@
+"""Packaged Matplotlib style sheets."""

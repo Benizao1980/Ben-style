@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "Please cite this repository if you use or adapt the figure style."
+title: "Pascoe Plot Style"
+type: software
+authors:
+  - family-names: "Pascoe"
+    given-names: "Ben"
+version: 0.2.0
+date-released: 2026-06-24
+license: MIT
