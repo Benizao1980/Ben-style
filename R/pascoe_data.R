@@ -321,6 +321,17 @@ pascoe_presets <- list(
     "low_support"="sand",
     "high_support"="burgundy",
     "highlight"="sand"
+),
+  "getcampy_species"=c(
+    "Campylobacter infans"="sage",
+    "Campylobacter_D jejuni"="powder_blue",
+    "Campylobacter jejuni"="powder_blue",
+    "Campylobacter coli"="dusty_pink",
+    "Campylobacter upsaliensis"="lavender",
+    "Campylobacter fetus"="mustard",
+    "Campylobacter_D sp934718785"="teal",
+    "Other GTDB taxa"="stone",
+    "Unassigned"="warm_grey"
 )
 )
 

@@ -1,5 +1,13 @@
 # Changelog
 
+## Unreleased — Codex and phylogeny style
+
+- Added AGENTS.md and TREE_STYLE_GUIDE.md to distinguish unrooted starburst trees from circular cladograms and add figure QC gates.
+- Added a GETcampy species colour preset using existing master colours, synchronised for Python and R.
+- Added a synthetic R/ape unrooted tree example and Python regression tests.
+- Linked phylogenetic plotting conventions from the README, style guide and prompt template.
+
+
 ## 0.3.0 — 2026-06-24
 
 - Added R adapters for native BactDating, skygrowth and CaveDive result objects.

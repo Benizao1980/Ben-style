@@ -30,3 +30,7 @@ For a phylodynamic composite:
 
 Do not invent, smooth, omit or alter data. Keep all values, labels, uncertainty intervals, statistical tests and category definitions faithful to the supplied input.
 ```
+
+## When the figure contains a phylogeny
+
+Read TREE_STYLE_GUIDE.md and AGENTS.md. State the intended tree geometry before plotting: rectangular phylogram, circular rooted tree, or genuine unrooted equal-angle/starburst. **Do not** substitute a circular cladogram for a requested unrooted cloud. Retain all intended tips; preserve inference and branch lengths unless a clearly labelled comparison/transform is requested. For GETcampy, use the getcampy.species project preset and clearly distinguish GETcampy MAG markers from GTDB reference branches. Produce a small visual preview for review before batch-exporting publication outputs.
