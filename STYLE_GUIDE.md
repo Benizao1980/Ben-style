@@ -125,3 +125,7 @@ For manuscript figures, produce:
 - PNG at 300 dpi minimum, or 600 dpi for line-heavy figures.
 
 Use a white, non-transparent background unless another application explicitly requires transparency. Inspect the exported SVG for clipping, font substitution and unintended rasterisation.
+
+## 12. Tree geometry and phylogenetic plotting
+
+Read **TREE_STYLE_GUIDE.md** before producing tree figures. Select rooted rectangular, circular or unrooted/starburst layouts according to the scientific objective and user's visual reference. A circular cladogram with a fixed tip radius is **not** an unrooted equal-angle diversity cloud. Keep tree geometry and branch-length transformations separate from colours and theme settings. Use the canonical **getcampy.species** semantic preset for GETcampy taxon colouring and verify tip/metadata matches before export.

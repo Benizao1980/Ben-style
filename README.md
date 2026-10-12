@@ -226,3 +226,19 @@ python -m pytest
 ## Licence
 
 MIT. Reuse and adapt it freely.
+
+## Codex and phylogenetic figures
+
+- **AGENTS.md** gives Codex and other agents repeatable plotting and data-integrity instructions.
+- **TREE_STYLE_GUIDE.md** distinguishes unrooted starburst, circular, and rectangular phylogenies; it defines a preview/verification checklist.
+- The new semantic preset **getcampy.species** sets consistent GETcampy species colours in Python (R: **getcampy_species**), without modifying the existing master or Wes Anderson palettes.
+- **examples/unrooted_phylogeny_example.R** is a small synthetic example using R ape's actual `type="unrooted"` layout. Run `Rscript examples/unrooted_phylogeny_example.R` from the repository root after installing ape.
+
+Python usage:
+
+~~~python
+from pascoe_plot_style import get_preset
+species_colours = get_preset("getcampy.species")
+~~~
+
+For manuscript work, first render a small preview, compare the geometry with the figure brief, then export SVG/PDF/PNG. The worked example is illustrative; it does not replace phylogenetic inference, sequence validation or figure-specific review.
